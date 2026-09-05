@@ -65,4 +65,49 @@ student-management-system/
     └── app.py
 
 
+## 🖥️ Screenshots
+
+### 🔐 Admin Login
+
+<p align="center">
+  <img src="screenshots/login.png" alt="Admin Login" width="700">
+</p>
+
+### 🎓 Student Management Dashboard
+
+<p align="center">
+  <img src="screenshots/dashboard.png" alt="Student Management Dashboard" width="900">
+</p>
+
+
+
+## 👨‍💻 Author
+
+### Firthous S
+
+**Computer Science and Engineering Student**
+
+### 💡 Areas of Interest
+
+- 🤖 Artificial Intelligence
+- 📊 Data Science
+- 📈 Data Analytics
+- 🌐 Web Development
+
+
+
+## ⭐ Acknowledgement
+
+This project was developed as a learning project to gain practical experience in:
+
+- 💻 Full-Stack Web Development
+- 🐍 Python Flask
+- 🌐 REST API Development
+- 🗄️ MySQL Database Integration
+- 🔐 Authentication
+- 🔄 CRUD Operations
+
+
+
+
 
