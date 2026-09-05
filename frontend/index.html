@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+           <h1>🎓 Student Management System</h1>
+
+              <button onclick="logout()">
+                  🚪 Logout
+              </button>
+</div>
+
+        <!-- Add Student -->
+        <div class="card">
+
+            <h2>Add Student</h2>
+
+            <div class="form">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter student name"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter student email"
+                >
+
+                <button onclick="addStudent()">
+                    Add Student
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Student Records -->
+        <div class="card">
+
+            <h2>Student Records</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search student by name..."
+                onkeyup="searchStudents()"
+            >
+
+            <p>
+                Total Students:
+                <strong id="studentCount">0</strong>
+            </p>
+
+
+            <!-- Student Table -->
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentList">
+                    <!-- Students will appear here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- Edit Student Modal -->
+        <div id="editModal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close" onclick="cancelEdit()">
+                    &times;
+                </span>
+
+                <h2>✏️ Edit Student</h2>
+
+                <input
+                    type="hidden"
+                    id="editId"
+                >
+
+                <label>Student Name</label>
+
+                <input
+                    type="text"
+                    id="editName"
+                    placeholder="Enter student name"
+                >
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="editEmail"
+                    placeholder="Enter student email"
+                >
+
+                <div class="modal-buttons">
+
+                    <button onclick="updateStudent()">
+                        Update Student
+                    </button>
+
+                    <button onclick="cancelEdit()">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
