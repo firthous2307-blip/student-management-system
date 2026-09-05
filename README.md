@@ -26,20 +26,40 @@ The system allows an administrator to log in and manage student records through 
 ## 🛠️ Technologies Used
 
 ### Frontend
+
 - HTML5
 - CSS3
 - JavaScript
 
 ### Backend
+
 - Python
 - Flask
 - Flask-CORS
 
 ### Database
+
 - MySQL
 
 ### Configuration
+
 - python-dotenv
+
+---
+
+## 🖥️ Screenshots
+
+### 🔐 Admin Login
+
+<p align="center">
+  <img src="screenshots/login.png" alt="Admin Login" width="700">
+</p>
+
+### 🎓 Student Management Dashboard
+
+<p align="center">
+  <img src="screenshots/dashboard.png" alt="Student Management Dashboard" width="900">
+</p>
 
 ---
 
@@ -63,23 +83,9 @@ student-management-system/
 │
 └── backend/
     └── app.py
+```
 
 ---
-## 🖥️ Screenshots
-
-### 🔐 Admin Login
-
-<p align="center">
-  <img src="screenshots/login.png" alt="Admin Login" width="700">
-</p>
-
-### 🎓 Student Management Dashboard
-
-<p align="center">
-  <img src="screenshots/dashboard.png" alt="Student Management Dashboard" width="900">
-</p>
-
-
 
 ## 👨‍💻 Author
 
@@ -94,7 +100,7 @@ student-management-system/
 - 📈 Data Analytics
 - 🌐 Web Development
 
-
+---
 
 ## ⭐ Acknowledgement
 
@@ -107,7 +113,4 @@ This project was developed as a learning project to gain practical experience in
 - 🔐 Authentication
 - 🔄 CRUD Operations
 
-
-
-
-
+---
