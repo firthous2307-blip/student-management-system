@@ -17,13 +17,13 @@ def valid_email(email):
         re.fullmatch(r"^[^\s@]+@[^\s@]+\.[^\s@]+$", email)
     )
 
-def get_database_connection():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="my_sql_password",
-        database="student_db"
-    )
+return mysql.connector.connect(
+    host=os.getenv("MYSQL_HOST"),
+    port=int(os.getenv("MYSQL_PORT", 3306)),
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv("MYSQL_PASSWORD"),
+    database=os.getenv("MYSQL_DATABASE")
+)
 
 
 @app.route("/")
