@@ -64,7 +64,7 @@ student-management-system/
 └── backend/
     └── app.py
 
-
+---
 ## 🖥️ Screenshots
 
 ### 🔐 Admin Login
