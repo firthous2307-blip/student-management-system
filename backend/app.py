@@ -3,8 +3,11 @@ import os
 from flask_cors import CORS
 import mysql.connector
 import re
+from pathlib import Path
 
 app = Flask(__name__)
+BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIR = BASE_DIR / "frontend"
 app.secret_key = "student-management-secret"
 CORS(app, supports_credentials=True)
 
@@ -26,10 +29,8 @@ def get_database_connection():
     )    
 @app.route("/")
 def home():
-    return send_from_directory("../frontend", "login.html")
-@app.route("/<path:filename>")
-def frontend_files(filename):
-    return send_from_directory("../frontend", filename)
+    return send_from_directory(FRONTEND_DIR, "login.html")
+
 
 
 @app.route("/students", methods=["GET"])
@@ -235,5 +236,9 @@ def check_login():
     return jsonify({
         "logged_in": False
     }), 401
+@app.route("/<path:filename>")
+def frontend_files(filename):
+    return send_from_directory(FRONTEND_DIR, filename)
+
 if __name__ == "__main__":
     app.run(debug=True)
