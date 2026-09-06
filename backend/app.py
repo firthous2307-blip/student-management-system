@@ -1,4 +1,5 @@
-from flask import Flask, jsonify, request, session
+from flask import Flask, jsonify, request, session, send_from_directory
+import os
 from flask_cors import CORS
 import mysql.connector
 import re
@@ -23,12 +24,13 @@ def get_database_connection():
         password=os.getenv("MYSQL_PASSWORD"),
         database=os.getenv("MYSQL_DATABASE")
     )    
-
-
-
 @app.route("/")
 def home():
-    return "Student Management Backend is Running!"
+    return send_from_directory("../frontend", "login.html")
+@app.route("/<path:filename>")
+def frontend_files(filename):
+    return send_from_directory("../frontend", filename)
+
 
 @app.route("/students", methods=["GET"])
 def get_students():
