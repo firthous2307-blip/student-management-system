@@ -2,7 +2,7 @@
 // STUDENT MANAGEMENT SYSTEM - script.js
 // =====================================================
 
-const API_URL = "https://dependable-peace-production-9f76.up.railway.app";
+const API_URL = "";
 
 
 // =====================================================
