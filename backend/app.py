@@ -31,6 +31,9 @@ def get_database_connection():
 @app.route("/")
 def home():
     return send_from_directory(FRONTEND_DIR, "login.html")
+@app.route("/test")
+def test():
+    return f"Frontend folder exists: {FRONTEND_DIR.exists()} | Login file exists: {(FRONTEND_DIR / 'login.html').exists()}"
 
 
 
