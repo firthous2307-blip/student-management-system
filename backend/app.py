@@ -5,6 +5,7 @@ import mysql.connector
 import re
 from pathlib import Path
 
+
 app = Flask(__name__)
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
