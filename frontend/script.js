@@ -2,7 +2,7 @@
 // STUDENT MANAGEMENT SYSTEM - script.js
 // =====================================================
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://dependable-peace-production-9f76.up.railway.app";
 
 
 // =====================================================
