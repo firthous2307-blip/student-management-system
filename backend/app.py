@@ -7,23 +7,23 @@ app = Flask(__name__)
 app.secret_key = "student-management-secret"
 CORS(app, supports_credentials=True)
 
-
 def valid_name(name):
-    return bool(re.fullmatch(r"[A-Za-z ]+", name))
+  return bool(re.fullmatch(r"[A-Za-z ]+", name))
 
 
 def valid_email(email):
     return bool(
         re.fullmatch(r"^[^\s@]+@[^\s@]+\.[^\s@]+$", email)
     )
+def get_database_connection():
+    return mysql.connector.connect(
+        host=os.getenv("MYSQL_HOST"),
+        port=int(os.getenv("MYSQL_PORT", 3306)),
+        user=os.getenv("MYSQL_USER"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        database=os.getenv("MYSQL_DATABASE")
+    )    
 
-return mysql.connector.connect(
-    host=os.getenv("MYSQL_HOST"),
-    port=int(os.getenv("MYSQL_PORT", 3306)),
-    user=os.getenv("MYSQL_USER"),
-    password=os.getenv("MYSQL_PASSWORD"),
-    database=os.getenv("MYSQL_DATABASE")
-)
 
 
 @app.route("/")
